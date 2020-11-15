@@ -344,8 +344,7 @@ function(input, output, session) {
       if (is.null(groups)){ #如果没有选择组别，就默认是所有组
         genes_neighbor_nodes_edges <- get_nodes_edges_gg(genes_neighbor, 
                                                          groups = c("COPD_smoker","smoker",
-                                                                    "nonsmoker","COPD_vs_smoker",
-                                                                    "COPD_vs_nonsmoker","smoker_vs_nonsmoker"))
+                                                                    "nonsmoker"))
       }else{
         genes_neighbor_nodes_edges <- get_nodes_edges_gg(genes_neighbor, groups)
       }

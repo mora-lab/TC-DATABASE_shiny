@@ -72,8 +72,7 @@ weight_option_for_where <- function(groups,
 status_type_return_for_gg <- function(groups){
   
   if (is.null(groups)){
-    groups = c("COPD_smoker","smoker","nonsmoker",
-               "COPD_vs_smoker","COPD_vs_nonsmoker","smoker_vs_nonsmoker")
+    groups = c("COPD_smoker","smoker","nonsmoker")
   }
   
   #========================return options=========================================
@@ -96,8 +95,7 @@ status_type_return_for_gg <- function(groups){
 status_time_weight_return_for_gg <- function(groups){
   
   if (is.null(groups)){
-    groups = c("COPD_smoker","smoker","nonsmoker",
-               "COPD_vs_smoker","COPD_vs_nonsmoker","smoker_vs_nonsmoker")
+    groups = c("COPD_smoker","smoker","nonsmoker")
   }
   
   #status_time_weight 比如： nonsmoker_M3_weight

@@ -4,10 +4,7 @@
 #设置组别选项,组别设置成单选==================================================
 al_group_choices <- c("COPD smoker" = "COPD_smoker",
                        "smoker" = "smoker",
-                       "non-smoker" = "nonsmoker",
-                       "COPD smoker VS smoker" = "COPD_vs_smoker",
-                       "COPD smoker VS non-smoker" = "COPD_vs_nonsmoker",
-                       "smoker VS non-smoker" = "smoker_vs_nonsmoker")
+                       "non-smoker" = "nonsmoker")
 
 al_select_groups <- selectInput("al_groups", "Groups:",al_group_choices, selected = "COPD_smoker",multiple = F )
 

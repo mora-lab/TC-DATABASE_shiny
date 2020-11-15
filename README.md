@@ -1,7 +1,5 @@
 # Shiny app
-Here is the place for the shiny app
-
-This shiny app is for find out those genes relationship following time in COPD patients.
+This shiny app can find out those genes relationship following time in COPD patients.
 
 We used data from GEO data [GSE108134](https://pmlegacy.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE108134).
 This data included three groups(COPD smoker, smoker and non-smoker) and four timepoints(0 months, 3 months, 6 months and 12 months).
@@ -21,7 +19,7 @@ In our disign, we made three tab: `Gene Relationships in KEGG Pathway/GO Term`, 
 ## Run this shiny
 
 **Step1:**   
-Before you run this shiny, you need to start [neo4j database(version = 3.5.23)](https://neo4j.com/download-center/#community) and using my database, so you need to download this [database](https://github.com/xiaowei3223/database/raw/master/neo4j_copd_2020.10.30.7z).  
+Before you run this shiny, you need to start [neo4j database(version = 3.5.23)](https://neo4j.com/download-center/#community) and using my database, so you need to download this [database](http://www.moralab.science/downloads/neo4j-copd20201115.tar.gz).  
 
 **Step2** [Install package](install_package.R)
 
@@ -30,8 +28,11 @@ Before you run this shiny, you need to start [neo4j database(version = 3.5.23)](
 library(RNeo4j)
 #using your lacol neo4j, change the username and password
 #graph = startGraph("http://localhost:7474/db/data/", username="neo4j", password="password")
-#using my public neo4j (just for our lab)
-graph = startGraph("http://192.168.1.104:7474/db/data/", username="neo4j", password="xiaowei")
+
+#using my public neo4j
+graph = startGraph("http://www.moralab.science:3838/db/data/", username="neo4j", password="xiaowei")
+
+#runing shiny
 library(shiny)
 runGitHub("mora-lab/TC-DATABASE_shiny")
 ```
@@ -53,7 +54,7 @@ You can input GO Term and KEGG pathway at the same time.
 
 ### 1.3 Groups
 **You must choose at least one group for query.**  
-We set this option has six groups: `COPD smoker`, `smoker`, `nonsmoker`, `COPD smoker VS smoker`, `COPD smoker VS nonsmoker` and `smoker VS nonsmoker`.
+We set this option has three groups: `COPD smoker`, `smoker` and `nonsmoker`.
 You can chose one or more groups to get whether those genes have relationship under groups your query.
 
 ### 1.4 Timeponts
@@ -83,7 +84,7 @@ This tab is for query special genes relationship in each time and groups.
 
 ### 2.2 Groups
 **You must choose at least one group for query.**  
-We set this option has six groups: `COPD smoker`, `smoker`, `nonsmoker`, `COPD smoker VS smoker`, `COPD smoker VS nonsmoker` and `smoker VS nonsmoker`.
+We set this option has three groups: `COPD smoker`, `smoker` and `nonsmoker`.
 You can chose one or more groups to get whether those genes have relationship under groups your query.
 
 ### 2.3 Timeponts
@@ -107,7 +108,7 @@ That show you those nodes and edge information in the network plot. It also make
 ## 3. Alluvial Diagram
 
 ### 3.1 Groups
-We set this option has six groups: `COPD smoker`, `smoker`, `nonsmoker`, `COPD smoker VS smoker`, `COPD smoker VS nonsmoker` and `smoker VS nonsmoker`.
+We set this option has three groups: `COPD smoker`, `smoker` and `nonsmoker`.
 You only chose one group to plot. This Alluvial plot will show you genes changing in WGNCA module in each timepoints in special group. 
 
 ### 3.2 Alluvial data and download

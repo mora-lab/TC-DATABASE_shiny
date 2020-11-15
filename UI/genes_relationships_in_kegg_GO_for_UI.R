@@ -27,10 +27,7 @@ select_time_point <- checkboxGroupInput("timepoints", "Timepoints:",
 #1.4 设置组别选项,组别设置成可多选==================================================
 group_choices <- c("COPD smoker" = "COPD_smoker",
                    "smoker" = "smoker",
-                   "non-smoker" = "nonsmoker",
-                   "COPD smoker VS smoker" = "COPD_vs_smoker",
-                   "COPD smoker VS non-smoker" = "COPD_vs_nonsmoker",
-                   "smoker VS non-smoker" = "smoker_vs_nonsmoker")
+                   "non-smoker" = "nonsmoker")
 select_groups <- selectInput("groups", "Groups:",group_choices, selected = "COPD_smoker",multiple = T)
 
 #1.5 设置weight选项=================================================================

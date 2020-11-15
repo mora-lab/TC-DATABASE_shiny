@@ -7,9 +7,6 @@
 merge_gene_exp <- function(groups,timepoints,gene_node  ){
   #group需要重新搞一搞，毕竟没有COPD_vs_smoker
   groups_for_exp <- groups[groups %in% c("COPD_smoker","nonsmoker","smoker") ]
-  if ("COPD_vs_smoker" %in% groups){groups_for_exp <- append(groups_for_exp, c("COPD_smoker","smoker"))}
-  if ("COPD_vs_nonsmoker" %in% groups){groups_for_exp <- append(groups_for_exp, c("COPD_smoker","nonsmoker"))}
-  if ("smoker_vs_nonsmoker" %in% groups){groups_for_exp <- append(groups_for_exp, c("nonsmoker","smoker"))}
   groups_for_exp <- unique(groups_for_exp)
   
   #得到表达值的列名

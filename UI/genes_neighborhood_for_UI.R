@@ -13,10 +13,7 @@ gnb_genes_select <- selectInput("gnb_genes", "Gene symbol or entrezid:",
 #1.2 设置组别选项,组别设置成可多选==================================================
 gnb_group_choices <- c("COPD smoker" = "COPD_smoker",
                    "smoker" = "smoker",
-                   "non-smoker" = "nonsmoker",
-                   "COPD smoker VS smoker" = "COPD_vs_smoker",
-                   "COPD smoker VS non-smoker" = "COPD_vs_nonsmoker",
-                   "smoker VS non-smoker" = "smoker_vs_nonsmoker")
+                   "non-smoker" = "nonsmoker")
 gnb_select_groups <- selectInput("gnb_groups", "Groups:",gnb_group_choices, selected = "COPD_smoker",multiple = T)
 
 #1.3 设置时间选项，多选============================================================
