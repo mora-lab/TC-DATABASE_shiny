@@ -19,7 +19,7 @@ In our disign, we made three tab: `Gene Relationships in KEGG Pathway/GO Term`, 
 ## Run this shiny
 
 **Step1:**   
-Before you run this shiny, you need to start [neo4j database(version = 3.5.23)](https://neo4j.com/download-center/#community) and using my database, so you need to download this [database](http://www.moralab.science/database/downloads/neo4j-copd20201115.tar.gz).  
+Before you run this shiny, you need to start [neo4j database(version = 3.5.23)](https://neo4j.com/download-center/#community) and using my database, so you need to download this [database](http://www.moralab.science/downloads/database/neo4j-copd20201115.tar.gz).  
 
 **Step2** [Install package](install_package.R)
 
