@@ -17,7 +17,7 @@ The app consists of four tabs: `Gene Relationships in KEGG Pathway/GO Term`, `Ge
 
 **Step1:**   
 
-Before you run this shiny app, you need to start the [neo4j database (version = 3.5.23)](https://neo4j.com/download-center/#community) and use our database. Therefore, you need to download the database [here](http://www.moralab.science/downloads/database/neo4j-copd20201115.tar.gz) and copy it in the ... folder.  
+Before you run this shiny app, you need to start the [neo4j database (version = 3.5.23)](https://neo4j.com/download-center/#community). Then, you need to download our database [here](http://www.moralab.science/downloads/database/neo4j-copd20201115.tar.gz) and copy it in the ... folder.  
 
 **Step2**
 
