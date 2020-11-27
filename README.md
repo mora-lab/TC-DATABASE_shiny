@@ -7,7 +7,7 @@ This is a shiny app to explore and study the dynamic correlation network of time
 We have used GEO data ([GSE108134](https://pmlegacy.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE108134)). This dataset includes three groups (COPD smoker, smoker and non-smoker) and four time-points (0 months, 3 months, 6 months, and 12 months).
 
 In order to find out the gene-gene correlations, we used the [WGCNA package](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/)
-for each time-point and each group. For pathway information, we used `clusterProfiler::download_KEGG()` to download human KEGG pathways and `biomaRt` package to convert gene IDs. For Gene Ontology (GO), we used the `GO.db` and `org.Hs.eg.db` packages for GO terms.
+for each time-point and each group. For pathway information, we used `clusterProfiler::download_KEGG()` to download human KEGG pathways and the `biomaRt` package to convert gene IDs. For Gene Ontology (GO), we used the `GO.db` and `org.Hs.eg.db` packages for GO terms.
 
 After collecting all gene-gene correlation scores, KEGG pathways, and GO terms, we imported all data into the Neo4j graph database, and built the shiny app to perform the different analyses and visualizations.
 
@@ -21,15 +21,15 @@ Before you run this shiny app, you need to start the [neo4j database (version = 
 
 **Step2**
 
-Go to R and [install required R packages](install_package.R)
+Go to R and [install required R packages](install_package.R).
 
 **Step3**  
 ```
 library(RNeo4j)
-#using your lacol neo4j, change the username and password
+#Option a) using your local neo4j, change the username and password:
 #graph = startGraph("http://localhost:7474/db/data/", username="neo4j", password="password")
 
-#using our public neo4j
+#Option b) using our public neo4j:
 graph = startGraph("http://www.moralab.science:3838/db/data/", username="neo4j", password="xiaowei")
 
 #run shiny
