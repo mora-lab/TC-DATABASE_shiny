@@ -4,7 +4,7 @@
 
 This is a shiny app to explore and study the dynamic correlation network of time-course gene expression data of small airway cells in COPD patients. Studies include gene neighborhoods, co-expression modules, and intra-pathway correlations, among others.
 
-We have used GEO data [GSE108134](https://pmlegacy.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE108134). This data includes three groups (COPD smoker, smoker and non-smoker) and four time-points (0 months, 3 months, 6 months, and 12 months).
+We have used GEO data ([GSE108134](https://pmlegacy.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE108134)). This dataset includes three groups (COPD smoker, smoker and non-smoker) and four time-points (0 months, 3 months, 6 months, and 12 months).
 
 In order to find out the gene-gene correlations, we used the [WGCNA package](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/)
 for each time-point and each group. For pathway information, we used `clusterProfiler::download_KEGG()` to download human KEGG pathways and `biomaRt` package to convert gene IDs. For Gene Ontology (GO), we used the `GO.db` and `org.Hs.eg.db` packages for GO terms.
