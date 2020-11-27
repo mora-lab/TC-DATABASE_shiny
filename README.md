@@ -1,27 +1,27 @@
 # Shiny app
-This shiny app can find out those genes relationship following time in COPD patients.
 
-We used data from GEO data [GSE108134](https://pmlegacy.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE108134).
-This data included three groups(COPD smoker, smoker and non-smoker) and four timepoints(0 months, 3 months, 6 months and 12 months).
+## Description
 
-In order to find out those genes relationship, we used [WGCNA package](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/)
-to get genes relationship for each timepoints of each groups.
+This is a shiny app to explore and study the dynamic correlation network of time-course gene expression data of small airway cells in COPD patients. Studies include gene neighborhoods, co-expression modules, and intra-pathway correlations, among others.
 
-We also want to know KEGG pathway and Gene Ontology Term that genes belong to, so we used `clusterProfiler::download_KEGG()` download human KEGG pathway and `biomaRt` package for convert gene ID.
-We used `GO.db` and `org.Hs.eg.db` package for Gene Ontology term.
+We have used GEO data [GSE108134](https://pmlegacy.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE108134). This data includes three groups (COPD smoker, smoker and non-smoker) and four time-points (0 months, 3 months, 6 months, and 12 months).
 
-After got genes relationship, Human KEGG pathway and Human GO term, we import all data to neo4j which is a graph database.
+In order to find out the gene-gene correlations, we used the [WGCNA package](https://horvath.genetics.ucla.edu/html/CoexpressionNetwork/Rpackages/WGCNA/)
+for each time-point and each group. For pathway information, we used `clusterProfiler::download_KEGG()` to download human KEGG pathways and `biomaRt` package to convert gene IDs. For Gene Ontology (GO), we used the `GO.db` and `org.Hs.eg.db` packages for GO terms.
 
-At the end, we built the shiny app that make us easily find out genes relationship following time.
+After collecting all gene-gene correlation scores, KEGG pathways, and GO terms, we imported all data into the Neo4j graph database, and built the shiny app to perform the different analyses and visualizations.
 
-In our disign, we made three tab: `Gene Relationships in KEGG Pathway/GO Term`, `Genes Neighborhoods Relationships` and `Alluvial Diagram`.
+The app consists of four tabs: `Gene Relationships in KEGG Pathway/GO Term`, `Genes Neighborhoods Relationships` and `Alluvial Diagram`.
 
-## Run this shiny
+## Run this shiny app
 
 **Step1:**   
-Before you run this shiny, you need to start [neo4j database(version = 3.5.23)](https://neo4j.com/download-center/#community) and using my database, so you need to download this [database](http://www.moralab.science/downloads/database/neo4j-copd20201115.tar.gz).  
 
-**Step2** [Install package](install_package.R)
+Before you run this shiny app, you need to start the [neo4j database (version = 3.5.23)](https://neo4j.com/download-center/#community) and use our database. Therefore, you need to download the database [here](http://www.moralab.science/downloads/database/neo4j-copd20201115.tar.gz) and copy it in the ... folder.  
+
+**Step2**
+
+Go to R and [install required R packages](install_package.R)
 
 **Step3**  
 ```
@@ -29,13 +29,15 @@ library(RNeo4j)
 #using your lacol neo4j, change the username and password
 #graph = startGraph("http://localhost:7474/db/data/", username="neo4j", password="password")
 
-#using my public neo4j
+#using our public neo4j
 graph = startGraph("http://www.moralab.science:3838/db/data/", username="neo4j", password="xiaowei")
 
-#runing shiny
+#run shiny
 library(shiny)
 runGitHub("mora-lab/TC-DATABASE_shiny")
 ```
+
+## Tutorial
 
 ## 1. Gene Relationships in KEGG Pathway/GO Term
 This tab is for query genes relationship in each time and groups under KEGG pathway or/and GO term.
