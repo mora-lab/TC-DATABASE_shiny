@@ -10,7 +10,7 @@ source("UI/genes_neighborhood_for_UI.R")
 source("UI/alluvial_diagram_for_UI.R")
 
 #The whole web interface
-navbarPage(title = "COPD Time-Sourse DB Query",
+navbarPage(title = "COPD Time-Course DB Query",
            tabPanel("Genes Relationships in KEGG Pathway/GO Term",
                     genes_relationships_in_pathway_UI
                    ),
