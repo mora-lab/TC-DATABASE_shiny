@@ -4,6 +4,6 @@
 if (!requireNamespace("BiocManager", quietly = TRUE))
 	install.packages("BiocManager", dependencies = TRUE)
 	
-requiredPackages <- c("visNetwork", "RNeo4j", "ggalluvial", "ggplot2", "shiny","DT", "igraph")			  
+requiredPackages <- c("visNetwork", "RNeo4j", "ggalluvial", "ggplot2", "shiny","DT", "igraph","xlsx")			  
 newPackages <- requiredPackages[!(requiredPackages %in% installed.packages()[,"Package"])]
 if(length(newPackages)) BiocManager::install(newPackages, ask = TRUE)
