@@ -15,27 +15,35 @@ The app consists of four tabs: `Gene Relationships in KEGG Pathway/GO Term`, `Ge
 
 ## Run this shiny app
 
-**Step1:**   
-
-Before you run this shiny app, you need to start the [neo4j database (version = 3.5.23)](https://neo4j.com/download-center/#community). Then, you need to download our database [here](http://www.moralab.science/downloads/database/neo4j-copd20201115.tar.gz) and copy it in the ... folder.  
-
-**Step2**
-
+### Step1: install R packages   
 Go to R and [install required R packages](install_package.R).
 
-**Step3**  
-```
-library(RNeo4j)
-#Option a) using your local neo4j, change the username and password:
-#graph = startGraph("http://localhost:7474/db/data/", username="neo4j", password="password")
 
-#Option b) using our public neo4j:
+### Step2: run this shiny app
+**Option a) Using neo4j from our lab**:
+```R
+# using our public neo4j:
+library(RNeo4j)
 graph = startGraph("http://www.moralab.science:3838/db/data/", username="neo4j", password="xiaowei")
 
 #run shiny
 library(shiny)
 runGitHub("mora-lab/TC-DATABASE_shiny")
 ```
+
+**Option b) using your local neo4j**  
+Before you run this shiny app, you need to start the [neo4j database (version = 3.5.23)](https://neo4j.com/download-center/#community). Then, you need to download our [database](http://www.moralab.science/downloads/database/neo4j-copd20201115.tar.gz), unzip the download file and copy to the `$NEO4J_HOME/data/database` folder.  However, you need to set `dbms.active_database=neo4j-copd20201115` in the `$NEO4J_HOME/conf/neo4j.conf` file.
+
+```R
+library(RNeo4j)
+# you should change the username and password in this command
+graph = startGraph("http://localhost:7474/db/data/", username="neo4j", password="password")
+
+#run shiny
+library(shiny)
+runGitHub("mora-lab/TC-DATABASE_shiny")
+```
+
 
 ## Tutorial
 
