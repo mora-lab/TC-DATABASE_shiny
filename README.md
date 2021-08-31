@@ -32,7 +32,7 @@ runGitHub("mora-lab/TC-DATABASE_shiny")
 ```
 
 **Option b) using your local neo4j**  
-Before you run this shiny app, you need to start the [neo4j database (version = 3.5.23)](https://neo4j.com/download-center/#community). Then, you need to download our <a href="http://www.moralab.science/downloads/database/neo4j-copd20201115.tar.gz" download>database</a>, unzip the download file and copy to the `$NEO4J_HOME/data/database` folder.  However, you need to set `dbms.active_database=neo4j-copd20201115` in the `$NEO4J_HOME/conf/neo4j.conf` file.
+Before you run this shiny app, you need to start the [neo4j database (version = 3.5.23)](https://neo4j.com/download-center/#community). Then, you need to download our <a href="http://www.moralab.science/downloads/database/neo4j-copd20201115.tar.gz" target="_blank">database</a>, unzip the download file and copy to the `$NEO4J_HOME/data/database` folder.  However, you need to set `dbms.active_database=neo4j-copd20201115` in the `$NEO4J_HOME/conf/neo4j.conf` file.
 
 ```R
 library(RNeo4j)
