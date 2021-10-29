@@ -1,6 +1,6 @@
 # Docker for TC-DATABASE
 
-This Docker version ppublished at https://hub.docker.com/r/moralab/copd-shiny.
+This Docker version published at https://hub.docker.com/r/moralab/copd-shiny.
 
 ## Usage
 Using the command to run this image:
@@ -21,4 +21,16 @@ After you run it, you can check:
 
 # VirtualBox for TC-DATABASE
 
-**TO DO**
+This virtualBox based on Ubuntu 20.04 locates at https://zenodo.org/deposit/5606999.
+
+The user and password for administrator of this virtualBox are:   
+User: `moralab`    
+Password: `moralab`    
+
+After you start this VirtualBox, you can directly open the Firefox browser to visit TC-DATABASE_shiny .
+
+- The time-course database: http://localhost:7474 with account `neo4j` with password `neo4j`.
+- The COPD-shiny: http://localhost:3838/copd_shiny/.
+
+
+
