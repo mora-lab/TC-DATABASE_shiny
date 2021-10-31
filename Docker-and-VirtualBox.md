@@ -1,9 +1,13 @@
-# Docker for TC-DATABASE
+# Docker and VirtualBox implementations of TC-DATABASE
 
-This Docker version published at https://hub.docker.com/r/moralab/copd-shiny.
+## Docker TC-DATABASE:
 
-## Usage
-Using the command to run this image:
+> If you need help to install Docker, check [here](https://github.com/mora-lab/installing/tree/main/docker)
+
+> 1. This Docker implementation has been published at https://hub.docker.com/r/moralab/copd-shiny.
+
+### Usage:
+> 2. Use the following commands to run this image:
 
 ```shell
 sudo docker run -d \
@@ -14,23 +18,24 @@ sudo docker run -d \
     moralab/copd-shiny
 ```
 
-After you run it, you can check:
+> 3. After running it, you can check:
 - The **time-course database**:  [http://localhost:7474](http://localhost:7474) with account `neo4j` with password `neo4j`.
 - The **COPD-shiny**: [http://localhost:3838](http://localhost:3838).
 - The **RStudio-server**: [http://localhost:8787](http://localhost:8787) with account `rstudio` with password `rstudio`.
 
-# VirtualBox for TC-DATABASE
+## VirtualBox TC-DATABASE:
 
-This virtualBox based on Ubuntu 20.04 locates at https://zenodo.org/deposit/5606999.
+> If you need help to install VirtualBox, check [here](https://github.com/mora-lab/installing/tree/main/virtualbox)
 
-The user and password for administrator of this virtualBox are:   
+> 4. This VirtualBox implementation is based on Ubuntu 20.04 and can be downloaded from: https://zenodo.org/deposit/5606999.
+
+> 5. The administrator user and password for this VirtualBox are:   
 User: `moralab`    
 Password: `moralab`    
 
-After you start this VirtualBox, you can directly open the Firefox browser to visit TC-DATABASE_shiny .
+> 6. After starting this VirtualBox, you can directly open the Firefox browser to visit TC-DATABASE_shiny .
 
-- The time-course database: http://localhost:7474 with account `neo4j` with password `neo4j`.
+- The time-course database: http://localhost:7474 using the account `neo4j` and password `neo4j`.
 - The COPD-shiny: http://localhost:3838/copd_shiny/.
 
-
-
+*Last updated: Oct.31st, 2021*
