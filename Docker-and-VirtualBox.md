@@ -6,10 +6,10 @@
 
 > If you need help to install `Docker`, click [here](https://github.com/mora-lab/installing/tree/main/docker)
 
-> 1. This Docker implementation has been published at https://hub.docker.com/r/moralab/copd-shiny.
+> 1. This Docker implementation has been published at https://hub.docker.com/r/moralab/copd-shiny
 
 ### Usage:
-> 2. Use the following commands to run this image:
+> 2. Use the following commands to run the TC-DATABASE image:
 
 ```shell
 sudo docker run -d \
@@ -20,7 +20,7 @@ sudo docker run -d \
     moralab/copd-shiny
 ```
 
-> 3. After running it, you can check:
+> 3. After running it, open `Firefox` and you can check:
 - The **neo4j time-course database**:  [http://localhost:7474](http://localhost:7474) using the account `neo4j` and password `neo4j`.
 - The **COPD shiny app**: [http://localhost:3838](http://localhost:3838).
 - The **RStudio-server**: [http://localhost:8787](http://localhost:8787) using the account `rstudio` and password `rstudio`.
@@ -38,6 +38,6 @@ Password: `moralab`
 > 6. After starting this VirtualBox, you can directly open the Firefox browser to visit `TC-DATABASE`.
 
 - The **neo4j time-course database**: http://localhost:7474 using the account `neo4j` and password `neo4j`.
-- The **COPD shiny app**: http://localhost:3838/copd_shiny/.
+- The **COPD shiny app**: http://localhost:3838/copd_shiny/
 
 *Last updated: Oct.31st, 2021*
