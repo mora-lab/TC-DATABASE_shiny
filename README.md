@@ -10,14 +10,12 @@ As default and example, we have included the dynamic coexpression network of gen
 
 After collecting all gene-gene correlation scores, KEGG pathways, and GO terms, we imported all data into the neo4j graph database, and built the shiny app to perform the different analyses and visualizations.
 
-## Run this shiny app
+## Install and run TC-DATABASE:
 
-The app consists of three tabs: `Gene Relationships in KEGG Pathway/GO Term`, `Genes Neighborhoods Relationships` and `Alluvial Diagram`.
-
-### Step1: Install R packages   
+### Step1: Install R packages:
 Go to `R` and [install required R packages](install_package.R).
 
-### Step2: Run this shiny app
+### Step2: Run this shiny app:
 
 **Option a) Using neo4j from our lab**:
 ```R
@@ -30,12 +28,12 @@ library(shiny)
 runGitHub("mora-lab/TC-DATABASE_shiny")
 ```
 
-**Option b) using your local neo4j**:
+**Option b) Using your local neo4j**:<br>
 Before you run this shiny app, you need to:<br>
-(i) Start the [neo4j database (version = 3.5.23)](https://neo4j.com/download-center/#community).
-(ii) Download our <a href="http://www.moralab.science/downloads/database/neo4j-copd20201115.tar.gz" target="_blank" download="neo4j-copd20201115.tar.gz">database</a>.
-(iii) Unzip the downloaded file and copy it to the `$NEO4J_HOME/data/database` folder.
-(iv) Set `dbms.active_database=neo4j-copd20201115` in the `$NEO4J_HOME/conf/neo4j.conf` file.
+(i) Start the [neo4j database (version = 3.5.23)](https://neo4j.com/download-center/#community).<br>
+(ii) Download our <a href="http://www.moralab.science/downloads/database/neo4j-copd20201115.tar.gz" target="_blank" download="neo4j-copd20201115.tar.gz">database</a>.<br>
+(iii) Unzip the downloaded file and copy it to the `$NEO4J_HOME/data/database` folder.<br>
+(iv) Set `dbms.active_database=neo4j-copd20201115` in the `$NEO4J_HOME/conf/neo4j.conf` file.<br>
 
 Now, you can go to R and run the following commands:
 
@@ -49,7 +47,12 @@ library(shiny)
 runGitHub("mora-lab/TC-DATABASE_shiny")
 ```
 
-## Tutorial
+## Install TC-DATABASE from Docker and VirtualBox:
+Click [here](https://github.com/mora-lab/TC-DATABASE_shiny/blob/master/Docker-and-VirtualBox.md)
+
+## Tutorial:
+
+The app consists of three tabs: `Gene Relationships in KEGG Pathway/GO Term`, `Genes Neighborhoods Relationships` and `Alluvial Diagram`.
 
 ## 1. Gene Relationships in KEGG Pathway/GO Term
 This tab is for query genes relationship in each time and groups under KEGG pathway or/and GO term.
