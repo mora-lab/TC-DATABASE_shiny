@@ -29,7 +29,7 @@ sudo docker run -d \
 
 > If you need help to install `VirtualBox`, click [here](https://github.com/mora-lab/installing/tree/main/virtualbox)
 
-> 4. This VirtualBox implementation is based on `Ubuntu 20.04` and can be downloaded from: https://zenodo.org/deposit/5606999.
+> 4. This VirtualBox implementation is based on `Ubuntu 20.04` and can be downloaded from: https://zenodo.org/record/5606999#.YX-_O57P2Uk.
 
 > 5. The administrator user and password for this VirtualBox are:   
 User: `moralab`    
